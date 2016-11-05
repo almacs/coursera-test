@@ -25,14 +25,13 @@
 //
 //           $scope.message = evalIfTooMuch(count);
 //           $scope.msgClass = "message_val";
-//           $scope.messageAdd ="**NOT consider and empty item, i.e., , ,";
-//
 //
 //          }else{
 //           $scope.msgClass = "message_inv";
 //           $scope.message ="Please enter data first";
-//
 //         }
+//
+//         $scope.messageAdd ="**NOT consider and empty item, i.e., , ,";
 //
 //       }
 //
@@ -55,4 +54,4 @@
 //       }
 //     }
 // })();
-!function(){"use strict";function e(e){function s(e){return angular.isUndefined(e)?!0:0==e.trim().length||0==e.replace(/,/g," ").trim().length?!0:!1}function n(e){return 3>=e?"Enjoy!":"Too much!"}e.message="",e.messageAdd="",e.msgClass="message",e.displayMessage=function(){var t,a,i,l=e.listDishes,g=0;if(s(l))e.msgClass="message_inv",e.message="Please enter data first";else{for(t=l.split(","),a=t.length,i=0;i<t.length;i++)t[i].trim().length>0&&g++;e.message=n(g),e.msgClass="message_val",e.messageAdd="**NOT consider and empty item, i.e., , ,"}}}angular.module("LunchCheck",[]).controller("LunchCheckController",e),e.$inject=["$scope"]}();
+!function(){"use strict";function e(e){function s(e){return angular.isUndefined(e)?!0:0==e.trim().length||0==e.replace(/,/g," ").trim().length?!0:!1}function n(e){return 3>=e?"Enjoy!":"Too much!"}e.message="",e.messageAdd="",e.msgClass="message",e.displayMessage=function(){var t,a,i,l=e.listDishes,g=0;if(s(l))e.msgClass="message_inv",e.message="Please enter data first";else{for(t=l.split(","),a=t.length,i=0;i<t.length;i++)t[i].trim().length>0&&g++;e.message=n(g),e.msgClass="message_val"}e.messageAdd="**NOT consider and empty item, i.e., , ,"}}angular.module("LunchCheck",[]).controller("LunchCheckController",e),e.$inject=["$scope"]}();
